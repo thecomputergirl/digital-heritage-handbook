@@ -2,22 +2,20 @@
 layout: default
 ---
 
-<div class="home">
+  <h1>{{ site.title }} <small>by Tim Sherratt</small></h1>
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <p class="lead">A growing collection of useful bits and pieces.</p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<h3>Recent additions</h3>
+<ul>
+{% for module in site.modules %}
+{% unless module.title == "Modules" %}
+<li><a href="{{ site.baseurl }}{{ module.url }}">{{ module.title }}</a></li>
+{% endunless %}
+{% endfor %}
+</ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+  
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

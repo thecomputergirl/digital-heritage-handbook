@@ -1,0 +1,15 @@
+---
+permalink: /activities/
+layout: default
+title: Activities
+---
+
+<h1>Activities</h1>
+
+<ul>
+{% for activity in site.activities | sort: "title" %}
+{% unless activity.title == "Activities" %}
+<li><a href="{{ site.baseurl }}{{ activity.url }}">{{ activity.title }}</a></li>
+{% endunless %}
+{% endfor %}
+</ul>

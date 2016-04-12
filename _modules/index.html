@@ -1,0 +1,15 @@
+---
+permalink: /modules/
+layout: default
+title: Modules
+---
+
+<h1>Modules</h1>
+
+<ul>
+{% for module in site.modules %}
+{% unless module.title == "Modules" %}
+<li><a href="{{ site.baseurl }}{{ module.url }}">{{ module.title }}</a></li>
+{% endunless %}
+{% endfor %}
+</ul>
