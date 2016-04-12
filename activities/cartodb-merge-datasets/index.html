@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Merging data sources in CartoDB</title>
+  <meta name="description" content="Merging data sources in CartoDB">
+
+  <link rel="stylesheet" href="/digital-heritage-handbook/css/main.css">
+  <link rel="canonical" href="/digital-heritage-handbook/activities/cartodb-merge-datasets/">
+  <link rel="alternate" type="application/rss+xml" title="Digital Heritage Handbook" href="/digital-heritage-handbook/feed.xml">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/digital-heritage-handbook/">Digital Heritage Handbook</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href="/digital-heritage-handbook/">Home</a></li>
+              <li><a href="/digital-heritage-handbook/modules/">Modules</a></li>
+              <li class="active"><a href="/digital-heritage-handbook/activities/">Activities</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <h1 id="merging-data-sources-in-cartodb">Merging data sources in CartoDB</h1>
+
+<p>A common mapping task is to calculate and display the number of points that are located within certain boundaries or regions – eg the number of public toilets within each postcode region. This is easy to do in CartoDB.</p>
+
+<h2 id="loading-the-datasets">Loading the datasets</h2>
+
+<p>In this exercise we’ll be mapping the number of playgrounds in the ACT by administrative district. We’ll use two datasets from data.act.gov.au:</p>
+
+<ul>
+  <li><a href="https://dl.dropbox.com/s/hfyuybsxcryfaf8/Town_And_District_Playgrounds.csv?dl=0">Town and district playgrounds</a></li>
+  <li><a href="https://dl.dropbox.com/s/lpho1jgznh7261n/ACT%20Administrative%20Boundaries.zip?dl=0">ACT administrative boundaries</a></li>
+</ul>
+
+<p>Download these datasets to your computer and save them somewhere obvious (such as your desktop).</p>
+
+<p>Follow the instructions in the ‘Uploading data’ section of <a href="cartdb_getting_started.md">Getting started with CartoDB</a> to load both datasets into CartoDB.</p>
+
+<p>You may notice that when you upload the administrative boundaries to CartoDB you end up with three datasets. That’s because there’s three levels in the administrative hierarchy of the ACT – the territory itself, its 20 districts, and its 121 divisions. Each dataset in CartoDB provides the boundaries for one of these administrative levels.</p>
+
+<p>We’ll be using the divisions. The easy way to identify it is to look at the number of rows in the dataset. The divisions dataset has 121 rows. Click on the title to open it.</p>
+
+<p>For convenience, let’s rename the dataset. Click on the title at the top left of the table and enter a new name, such as ‘ACT divisions’. Click save.</p>
+
+<p>Things to notice:</p>
+
+<ul>
+  <li>Look at <code class="highlighter-rouge">the_geom</code> field in the divisions dataset. Instead of coordinates it says ‘Polygon’. The geospatial data in this dataset represents a set of boundaries rather than a single point.</li>
+  <li>Click on ‘map view’ to see the boundaries.</li>
+  <li>Open the playgrounds dataset. What sort of spatial data does it contain?</li>
+</ul>
+
+<h2 id="merging-datasets">Merging datasets</h2>
+
+<ul>
+  <li>Open the divisions dataset.</li>
+  <li>At the bottom right of the table you’ll see three icons. Hover over them to see what they do.</li>
+  <li>Click on the ‘merge datasets’ icon.</li>
+  <li>You’ll see there’s a choice between a column join and a spatial join. We’re going to do a spatial join – this means we’re going to look for playgrounds whose coordinates locate them within each division. Click ‘Spatial join’.</li>
+  <li>Now we have to add the playgrounds dataset. Select it from the dropdown list. The fields from the playgrounds dataset will appear.</li>
+  <li>We have to tell CartoDB what to do with the points it finds within each region. You’ll see three options – ‘sum’, ‘count’, ‘avg’. Click ‘count’. This will add up the number of playgrounds per division.</li>
+  <li>We also have to specify which fields from the divisions dataset we want to appear in the new merged table. Check ‘division’ in the left hand column, so that we’ll have access to the names of each division.</li>
+  <li>Click the ‘Merge datasets’ button. Your new merged dataset will appear!</li>
+</ul>
+
+<p>Things to note:</p>
+
+<ul>
+  <li>The product of our spatial merge is in the <code class="highlighter-rouge">intersect_count</code> column. This is how many  playgrounds were found within each division.</li>
+  <li>Other than <code class="highlighter-rouge">carto_id</code> and <code class="highlighter-rouge">the_geom</code> the only other field in the dataset is the <code class="highlighter-rouge">division</code> label that we selected during the merge process. If you want other fields to be included you have to remember to select them before you merge.</li>
+</ul>
+
+<h2 id="mapping-playground-densities">Mapping playground densities</h2>
+
+<p>Now we have a dataset with regions and counts – time to make a choropleth map!</p>
+
+<ul>
+  <li>Click on ‘Map view’.</li>
+  <li>Click on the paintbrush icon to open the ‘wizards’ tab and choose ‘choropleth’.</li>
+  <li>Make sure that the column value is <code class="highlighter-rouge">intersect_count</code>.</li>
+  <li>We’ve only got a limited set of values (0 to 3), so change the ‘buckets’ setting to 5.</li>
+  <li>What can you see?</li>
+  <li>Click on the ‘infowindow’ tab to edit the information displayed when you click on a region.</li>
+  <li>Check both <code class="highlighter-rouge">division</code> and <code class="highlighter-rouge">intersect_count</code>.</li>
+  <li>Click on the edit icon to change the labels. Change ‘intersect_count’ to ‘playgrounds’.</li>
+  <li>Now you can click on any division and see its name and number of playgrounds.</li>
+</ul>
+
+<h2 id="adding-the-playgrounds">Adding the playgrounds</h2>
+
+<p>The choropleth map gives us a quick visual representation of the density of playgrounds across ACT divisions, but what if we want to see more details about individual playgrounds? Let’s add another layer to our map:</p>
+
+<ul>
+  <li>Click on ‘Add layer’.</li>
+  <li>You’ll probably get a screen telling you you need to create a map before you can add more layers – – just click ‘OK’.</li>
+  <li>Select the original playgrounds data from the list of datasets and click ‘Add layer’.</li>
+  <li>Markers will appear on your map for each individual playground. Click on the ‘infowindow’ tab and select the information you want to be displayed when you click on one of the markers.</li>
+</ul>
+
+
+    </div>  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/digital-heritage-handbook/js/bootstrap.min.js"></script>
+  </body>
+</html>

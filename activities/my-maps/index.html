@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creating a map with Google My Maps</title>
+  <meta name="description" content="Creating a map with Google My Maps">
+
+  <link rel="stylesheet" href="/digital-heritage-handbook/css/main.css">
+  <link rel="canonical" href="/digital-heritage-handbook/activities/my-maps/">
+  <link rel="alternate" type="application/rss+xml" title="Digital Heritage Handbook" href="/digital-heritage-handbook/feed.xml">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/digital-heritage-handbook/">Digital Heritage Handbook</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href="/digital-heritage-handbook/">Home</a></li>
+              <li><a href="/digital-heritage-handbook/modules/">Modules</a></li>
+              <li class="active"><a href="/digital-heritage-handbook/activities/">Activities</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <h1 id="creating-a-map-with-google-my-maps">Creating a map with Google My Maps</h1>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>You’ll need to have a Google account to create and share maps using My Maps.</p>
+
+<p>To open up the My Maps editor you can either:</p>
+
+<ul>
+  <li>go to <a href="https://www.google.com.au/maps/">Google Maps</a>, choose ‘My Maps’ from the menu, and then click ‘Create Map’;</li>
+  <li>or go to your <a href="https://www.google.com.au/drive/">Google Drive</a> account and choose ‘New &gt; More &gt; Google My Maps’.</li>
+</ul>
+
+<p>Add a point to your new map:</p>
+
+<ul>
+  <li>Click on the marker icon (the cursor will change from a hand to crosshairs)</li>
+  <li>Click anywhere on the map.</li>
+  <li>Add a title and description in the info box. Click save.</li>
+</ul>
+
+<p>Search for a place to add to your map:</p>
+
+<ul>
+  <li>Type a query in the search box to find a place – try  ‘University of Canberra’.</li>
+  <li>The map will recenter and a marker will appear.</li>
+  <li>To add this marker to your map, click ‘Add to map’.</li>
+  <li>Click on the pencil icon to edit the content of the info box. You can also add a photo by clicking on the camera icon.</li>
+</ul>
+
+<p>Try:</p>
+
+<ul>
+  <li>Draw an area or a line using the polygon tool. What might you use this for?</li>
+</ul>
+
+<h2 id="working-with-layers">Working with layers</h2>
+
+<p>Once you’ve added some points you’ll notice that they appear in the left-hand side menu box under ‘Untitled layer’. A layer is a way of grouping together particular features. A single map might have multiple layers.</p>
+
+<p>Try:</p>
+
+<ul>
+  <li>Untick the box next to ‘Untitled layer’. What happens?</li>
+  <li>Tick the box to make the layer visible again.</li>
+</ul>
+
+<h2 id="adding-a-new-layer">Adding a new layer</h2>
+
+<p>We’re now going to import some external data to populate a new layer.</p>
+
+<ul>
+  <li>Our dataset is a list of bus stops in Canberra – <a href="https://dl.dropbox.com/s/61pwz2g7ako8rxm/Bus_stop_locations_around_the_ACT.csv?dl=0">download the CSV file</a> to your desktop.</li>
+  <li>In the My Maps menu box click on ‘Add layer’. A new ‘Untitled layer’ will appear.</li>
+  <li>Click on ‘Import’, then select and upload the CSV file from your desktop.</li>
+  <li>You’ll then be asked which fields in your file provide spatial data – the latitude and longitude of the bus stops.</li>
+  <li>Despite its name, both coordinates are included in the <code class="highlighter-rouge">stop_lat</code> field. To see a sample of the data, click on the question mark after the field name.</li>
+  <li>Check the box next to <code class="highlighter-rouge">stop_lat</code> box. You’ll then be asked what the order of the coordinates is – choose ‘Latitude, Longitude’. Click ‘Continue’.</li>
+  <li>Now choose the field to use as  label for the markers – choose <code class="highlighter-rouge">stop_name</code> and click ‘Finish’.</li>
+</ul>
+
+<p>You’ll now have a map with lots of markers. Examine it carefully – do you notice anything odd? You’ll probably find that large areas of Canberra have no bus stops at all. Why?</p>
+
+<p>Google My Maps lets you add a maximum of 2000 points to any layer. There are more than 2000 bus stops in Canberra so My Maps has truncated the data set without telling you – beware!</p>
+
+<p>Try:</p>
+
+<ul>
+  <li>My Maps styling abilities are limited, but if you hover over a marker (or set of markers) in the menu box you see a paint bucket. Click on it to open up the style options.</li>
+</ul>
+
+<h2 id="sharing-maps">Sharing maps</h2>
+
+<p>Once you’ve created a map you probably want to share it. In My Maps you can:</p>
+
+<ul>
+  <li>Create a shareable link</li>
+  <li>Embed the map in your own website</li>
+  <li>Download the map data for use in another program.</li>
+</ul>
+
+
+    </div>  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/digital-heritage-handbook/js/bootstrap.min.js"></script>
+  </body>
+</html>

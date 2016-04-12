@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Getting started with CartoDB</title>
+  <meta name="description" content="Getting started with CartoDB">
+
+  <link rel="stylesheet" href="/digital-heritage-handbook/css/main.css">
+  <link rel="canonical" href="/digital-heritage-handbook/activities/cartodb-getting-started/">
+  <link rel="alternate" type="application/rss+xml" title="Digital Heritage Handbook" href="/digital-heritage-handbook/feed.xml">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/digital-heritage-handbook/">Digital Heritage Handbook</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href="/digital-heritage-handbook/">Home</a></li>
+              <li><a href="/digital-heritage-handbook/modules/">Modules</a></li>
+              <li class="active"><a href="/digital-heritage-handbook/activities/">Activities</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <h1 id="getting-started-with-cartodb">Getting started with CartoDB</h1>
+
+<p><a href="https://cartodb.com/">CartoDB</a> is a powerful web-based platform for managing and visualising geospatial data. In this exercise we’ll import some data into CartoDB and look at the ways we can represent that data on a map.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li>A free CartoDB account</li>
+</ul>
+
+<h2 id="uploading-data">Uploading data</h2>
+
+<p>For this exercise we’ll be working with a CSV file containing data about <a href="https://dl.dropbox.com/s/k93mlgfftvfl5tk/ACT_Cyclist_Crashes.csv?dl=0">bicycle accidents in Canberra</a>. Download the file to your computer and save it somewhere convenient. Now we’ll upload the CSV file to CartoDB.</p>
+
+<ul>
+  <li>Login in to CartDB and select ‘Your datasets’ from the dropdown at the top of the page.</li>
+  <li>Click on the ‘New dataset’ button.</li>
+  <li>Click on ‘Browse’ to find the file on your computer.</li>
+  <li>Once the file is selected, click on the ‘Connect dataset’ button.</li>
+  <li>CartoDB will import the data. When it’s finished you’ll see the results in the ‘Data view’ – which looks pretty much like a regular spreadsheet.</li>
+</ul>
+
+<p>Some things to note:</p>
+
+<ul>
+  <li>Two columns have been added to the original dataset – <code class="highlighter-rouge">cartodb_id</code> and <code class="highlighter-rouge">the_geom</code>. The first is pretty obvious, but <code class="highlighter-rouge">the_geom</code> is where CartoDB puts the information it needs to display your data on a map.</li>
+  <li>CartoDB has already found the latitude and longitude columns in our data and used them to populate <code class="highlighter-rouge">the_geom</code>. But if it hadn’t, you could click on the little orange ‘Geo’ button to tell it where the spatial data is, or to geocode an address field.</li>
+</ul>
+
+<h2 id="making-your-first-map">Making your first map</h2>
+
+<p>With the data uploaded, and the geospatial data identified, it’s easy to view the data on a variety of different maps.</p>
+
+<ul>
+  <li>On the ‘Data view’ page click ‘Map view’.</li>
+  <li>Yep, that’s all you need to do – CartoDB will open up a map of Canberra and add a little orange dot for every cycle accident.</li>
+</ul>
+
+<h3 id="editing-the-infowindows">Editing the infowindows</h3>
+
+<p>If you click on one of the orange dots you’ll see the popup ‘infowindow’ is empty. Let’s fix that.</p>
+
+<ul>
+  <li>Click on the message icon in the toolbar on the right-hand side of the screen. This opens up the ‘infowindow’ configuration options.</li>
+  <li>Note there are two tabs – click and hover – to control what happens when you interact with the map.</li>
+  <li>On the ‘Click’ tab, move the slider to select <code class="highlighter-rouge">reported_location</code>. Click on one of the markers and see what’s changed.</li>
+  <li>Add some other fields, such as <code class="highlighter-rouge">severity</code> and <code class="highlighter-rouge">crash_type</code>. What happens if you uncheck the ‘Title’ box?</li>
+  <li>Click and drag fields to change the order in which they’re displayed.</li>
+</ul>
+
+<p>Try:</p>
+
+<ul>
+  <li>Use the select box near the top of the tab to change the colour of the header.</li>
+  <li>Click the edit icon to change the field labels.</li>
+  <li>If you understand HTML, click on the code icon to directly edit the infowindow HTML.</li>
+  <li>Switch to the ‘Hover’ tab and change what happens when you move your mouse over a marker.</li>
+</ul>
+
+<h3 id="filtering-data">Filtering data</h3>
+
+<p>But what if you don’t want to see all the data at once – filtering to the rescue!</p>
+
+<ul>
+  <li>Click the histogram icon on the toolbar to open the filters tab.</li>
+  <li>From the dropdown box choose the <code class="highlighter-rouge">severity</code> field.</li>
+  <li>The values and counts for this field are displayed. Click on ‘Property damage only’ to remove those markers from the map. Do the same for <code class="highlighter-rouge">injury</code>. Now the map only displays fatal accidents.</li>
+  <li>To quickly remove all your filters, click on ‘clear view’ in the bar above the map.</li>
+</ul>
+
+<p>Try:</p>
+
+<ul>
+  <li>When you create a filter you’re building a query for the underlying database. While you have a filter applied, click on the ‘SQL’ icon to see the query. You can edit the SQL directly to change your query.</li>
+</ul>
+
+<h2 id="other-types-of-maps">Other types of maps</h2>
+
+<p>CartoDB has predefined styles for different types of maps. Just click on the paintbrush icon to open the map ‘wizards’.</p>
+
+<h3 id="choropleth">Choropleth</h3>
+
+<p>A choropleth map uses colour to represent the size of a numeric value associated with each point.</p>
+
+<ul>
+  <li>From the ‘wizards’ tab select ‘choropleth’.</li>
+  <li>The ‘Column’ value tells CartoDB which field to use to generate the colours – it has be a field with a numeric value.</li>
+  <li>Select <code class="highlighter-rouge">cyclist_casualities</code>.</li>
+  <li>The ‘Bucket’ field determines the number of gradations to have in the data. Choose 3.</li>
+  <li>What can you see on the map now?</li>
+  <li>Obviously most accidents resulted in a single casualty, but a couple were more serious – can you find them?</li>
+</ul>
+
+<p>Try:</p>
+
+<ul>
+  <li>Fiddle with some of the other settings.</li>
+  <li>What happens when you change the ‘Quantification’ and ‘Bucket’ settings?</li>
+  <li>What does ‘Composite operation’ do?</li>
+</ul>
+
+<h3 id="category">Category</h3>
+
+<p>A category map assigns colours to markers according to the value of a selected field.</p>
+
+<ul>
+  <li>From the ‘wizards’ tab select ‘category’.</li>
+  <li>The ‘Column’ value determines which field will be used as the source of the categories. Obviously it will work best if the field has a limited and consistent set of values!</li>
+  <li>Select <code class="highlighter-rouge">crash_type</code> from the Column list.</li>
+</ul>
+
+<h3 id="heatmap">Heatmap</h3>
+
+<p>A heatmap groups markers together to give an overall picture of intensity.</p>
+
+<ul>
+  <li>From the ‘wizards’ tab select ‘heatmap’.</li>
+  <li>Where are the hot spots?</li>
+</ul>
+
+<h3 id="intensity">Intensity</h3>
+
+<p>Like the heatmap, the intensity map gives an indication of hot spots, but while keeping individual markers.</p>
+
+<ul>
+  <li>From the ‘wizards’ tab select ‘intensity’.</li>
+  <li>Zoom in on one of the red dots – what happens to it?</li>
+</ul>
+
+<h3 id="torque">Torque</h3>
+
+<p>The torque map adds a temporal dimension to your map, enabling you to see changes over time.</p>
+
+<p>Before we create a torque map using this data we need to make some changes to the fields.</p>
+
+<ul>
+  <li>Click on ‘Data view’ to go back to the table.</li>
+  <li>Look for the column called <code class="highlighter-rouge">crash_date</code>. You’ll notice that underneath the title is the word ‘string’. This means that when CartoDB imported this field it didn’t recognise it as a date. We can change this.</li>
+  <li>Click on the down arrow next to the <code class="highlighter-rouge">crash_type</code> heading. Choose ‘Change data type…’.</li>
+  <li>Select ‘Date’ and confirm the change.</li>
+  <li>That’s it! You’ll see the values in the column have changed into a standard date format. Now we can use this field in out torque map.</li>
+</ul>
+
+<p>Now we have a date field let’s make the torque map. Switch back to ‘Map view’.</p>
+
+<ul>
+  <li>From the ‘wizards’ tab select ‘torque’.</li>
+  <li>Select <code class="highlighter-rouge">crash_date</code> from the ‘Time column’ dropdown. The animation will automatically start playing.</li>
+  <li>Click the pause button to stop the animation. Drag the slider to change the date.</li>
+  <li>Switch on ‘Cumulative’ and start the animation playing again. What happens now?</li>
+</ul>
+
+<p>Try:</p>
+
+<ul>
+  <li>You can also add a time-based animation to heatmaps. Choose ‘heatmap’ and then check ‘Animated’. Set the ‘Time column’ to ‘crash_date’.</li>
+</ul>
+
+
+    </div>  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/digital-heritage-handbook/js/bootstrap.min.js"></script>
+  </body>
+</html>
