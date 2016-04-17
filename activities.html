@@ -8,8 +8,6 @@ title: Activities
 
 <ul>
 {% for activity in site.activities | sort: "title" %}
-{% unless activity.title == "Activities" %}
-<li><a href="{{ site.baseurl }}{{ activity.url }}">{{ activity.title }}</a></li>
-{% endunless %}
+    <li><a href="{{ site.baseurl }}{{ activity.url }}">{{ activity.title }}</a></li>
 {% endfor %}
 </ul>

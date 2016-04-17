@@ -1,17 +1,17 @@
 ---
 author: Tim Sherratt
 title: Making simple maps
-date: 12 April 2016
+date: 2016-04-12
 layout: default
 ---
 
-#Making simple maps
+# Making simple maps
 
 This tutorial will show you how to create simple data-driven maps using free, cloud-based software.
 
 * {==Why maps?==}
 
-##Software
+## Software
 
 This tutorial uses free (or [freemium](https://en.wikipedia.org/wiki/Freemium)) cloud-based mapping services.
 
