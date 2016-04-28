@@ -1,0 +1,9 @@
+under_construction:
+  label: Under construction
+  message: This page is likely to be messy and incomplete. Check back later.
+draft:
+  label: Draft
+  message: This page should be in a useful state, but still needs work before it's finished.
+published:
+  label: Published
+  message: Ready to go.

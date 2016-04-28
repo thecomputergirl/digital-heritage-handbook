@@ -1,11 +1,17 @@
 ---
 author: Tim Sherratt
 title: Merging data sources in CartoDB
-date: 12 April 2016
-layout: default
----
+date: 2016-04-12
+layout: default_module
+type: Activity
+status: draft
+tags:
+    - maps
+    - CartoDB
+lessons:
+    - Making simple maps
 
-# Merging data sources in CartoDB
+---
 
 A common mapping task is to calculate and display the number of points that are located within certain boundaries or regions -- eg the number of public toilets within each postcode region. This is easy to do in CartoDB.
 

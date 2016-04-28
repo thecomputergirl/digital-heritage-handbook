@@ -21,13 +21,16 @@ collections:
   activities:
     output: true
     permalink: '/:collection/:title/'
-  modules:
+  lessons:
+    output: true
+    permalink: '/:collection/:title/'
+  docs:
     output: true
     permalink: '/:collection/:title/'
   issues:
     output: true
     permalink: '/:collection/:title/'
-  contexts:
+  courses:
     output: true
     permalink: '/:collection/:title/'
 

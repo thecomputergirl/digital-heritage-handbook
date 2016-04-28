@@ -1,11 +1,16 @@
 ---
 author: Tim Sherratt
-date: 7 April 2016
-layout: default
+date: 2016-04-12
+layout: default_module
+type: Activity
+status: draft
 title: Creating a map with Google My Maps
+tags:
+    - maps
+    - MyMaps
+lessons:
+    - Making simple maps
 ---
-
-# Creating a map with Google My Maps
 
 ## Getting started
 

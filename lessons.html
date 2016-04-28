@@ -1,0 +1,14 @@
+---
+permalink: /lessons/
+layout: default
+title: Lessons
+---
+
+<h1>Lessons</h1>
+
+<ul>
+{% assign lessons = site.lessons | sort: "date" | reverse %}
+{% for lesson in lessons %}
+    <li><a href="{{ site.baseurl }}{{ lesson.url }}">{{ lesson.title }}</a></li>
+{% endfor %}
+</ul>

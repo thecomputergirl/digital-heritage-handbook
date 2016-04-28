@@ -7,11 +7,35 @@ layout: default
 
   <p class="lead">A growing collection of useful bits and pieces.</p>
 
-<h3>Recent additions</h3>
-<ul>
-{% assign modules = site.modules | sort: "date" | reverse %}
-{% for module in modules limit:10 %}
-    <li><a href="{{ site.baseurl }}{{ module.url }}">{{ module.title }}</a></li>
-{% endfor %}
-</ul>
+  <p class="bg-warning bg-context">This handbook is under construction! New content will be added regularly, and may be reorganised on a fleeting whim... at least until I sort out what I'm doing.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Recent lessons</h3>
+        <ul>
+        {% assign lessons = site.lessons | sort: "date" | reverse %}
+        {% for lesson in lessons limit:10 %}
+            <li><a href="{{ site.baseurl }}{{ lesson.url }}">{{ lesson.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h3>Recent activities</h3>
+        <ul>
+        {% assign activities = site.activities | sort: "date" | reverse %}
+        {% for act in activities limit:10 %}
+            <li><a href="{{ site.baseurl }}{{ act.url }}">{{ act.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h3>Recent docs</h3>
+        <ul>
+        {% assign docs = site.docs | sort: "date" | reverse %}
+        {% for doc in docs limit:10 %}
+            <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
 

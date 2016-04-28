@@ -1,11 +1,16 @@
 ---
 author: Tim Sherratt
 title: Getting started with CartoDB
-date: 12 April 2016
-layout: default
+date: 2016-04-12
+layout: default_module
+type: Activity
+status: draft
+tags:
+    - maps
+    - CartoDB
+lessons:
+    - Making simple maps
 ---
-
-# Getting started with CartoDB
 
 [CartoDB](https://cartodb.com/) is a powerful web-based platform for managing and visualising geospatial data. In this exercise we'll import some data into CartoDB and look at the ways we can represent that data on a map.
 

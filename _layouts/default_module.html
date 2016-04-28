@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div class="container">
+      {% include navbar.html %}
+      {% include page_head.html %}
+      <div class="row">
+        <div class="col-md-8">
+          {{ content }}
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+          {% if page.lessons %}
+          <h4>Associated lessons</h4>
+          <ul>
+          {% for lesson in page.lessons %}
+            <li><a href="{{ site.baseurl }}/lessons/{{ lesson|slugify }}/">{{ lesson }}</a></li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+          <h4>Tags</h4>
+          {% for tag in page.tags %}
+            <a class="label label-primary" href="{{ site.baseurl }}/tags/#{{ tag | slugify }}/">{{ tag }}</a> 
+          {% endfor %}
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/script.js"></script>
+  </body>
+</html>

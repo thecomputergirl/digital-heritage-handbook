@@ -1,11 +1,16 @@
 ---
 author: Tim Sherratt
 title: Splitting coordinate values in Google Sheets
-date: 12 April 2016
-layout: default
+date: 2016-04-12
+layout: default_module
+type: Activity
+status: draft
+tags:
+    - maps
+    - Google Sheets
+lessons:
+    - Making simple maps
 ---
-
-# Splitting coordinate values in Google Sheets
 
 ## The problem
 

@@ -1,0 +1,453 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"year_",
+				"year_end"
+			],
+			[
+				"process",
+				"process_results"
+			],
+			[
+				"re",
+				"remove  (function)"
+			],
+			[
+				"create",
+				"create_collectionview"
+			],
+			[
+				"get",
+				"get_query"
+			],
+			[
+				"api",
+				"api_query"
+			],
+			[
+				"related",
+				"related_party"
+			],
+			[
+				"I",
+				"IntegerField"
+			],
+			[
+				"Date",
+				"DateTimeField  (class)"
+			],
+			[
+				"sta",
+				"StandardMetadata"
+			],
+			[
+				"F",
+				"ForeignKey  (class)"
+			],
+			[
+				"Man",
+				"ManyToManyField  (class)"
+			],
+			[
+				"vali",
+				"validictory"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/bootstrap.min.js",
+			"settings":
+			{
+				"buffer_size": 36868,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 93.0,
+		"last_filter": "Package Control: inst",
+		"selected_items":
+		[
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tim/Dropbox/UC/teaching/handbook",
+		"/Users/tim/Dropbox/UC/teaching/handbook/js"
+	],
+	"file_history":
+	[
+		"/Users/tim/Dropbox/UC/teaching/handbook/Gemfile",
+		"/Users/tim/Dropbox/UC/teaching/handbook/_modules/making_simple_maps.md",
+		"/Volumes/WORKING/mycode/immigration/src/analyse_functions.py",
+		"/Volumes/tim/mycode/rsaccess/web/app/scripts/controllers/items.js",
+		"/Volumes/tim/mycode/rsaccess/web/app/index.html",
+		"/Volumes/tim/mycode/rsaccess/web/app/views/items.html",
+		"/Volumes/tim/mycode/rsaccess/src/credentials.py",
+		"/Volumes/tim/mycode/rsaccess/api/api.py",
+		"/Volumes/tim/mycode/rsaccess/src/harvest_closed.py",
+		"/Users/tim/Dropbox/settings.xml",
+		"/Volumes/tim/mycode/faceapi/src/requirements.txt",
+		"/Volumes/tim/mycode/faceapi/src/api.py",
+		"/Users/tim/mycode/daa/directory/server_settings.py",
+		"/Users/tim/mycode/daa2/directory/directory/settings_prod.py",
+		"/Users/tim/mycode/rsaccess/src/credentials.py",
+		"/Users/tim/mycode/rsaccess/src/credentials_blank.py",
+		"/Users/tim/mycode/rsaccess/src/readme.md",
+		"/Users/tim/mycode/rsaccess/src/.gitignore",
+		"/Users/tim/mycode/rsaccess/src/data/titles-A1838.txt",
+		"/Users/tim/mycode/rsaccess/src/data/titles-33(1)(a).txt",
+		"/Users/tim/mycode/rsaccess/src/data/titles-33(1)(a).csv",
+		"/Users/tim/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/tim/mycode/rsaccess/src/analyse.py",
+		"/Volumes/WORKING/mycode/rsaccess/src/analyse.py",
+		"/Users/tim/mycode/rsaccess/src/rstools/client.py",
+		"/Users/tim/mycode/rsaccess/src/data",
+		"/Users/tim/Dropbox/mycode/iafiles/src/harvest.py",
+		"/Users/tim/mycode/iafiles/src/harvest.py",
+		"/Users/tim/mycode/iafiles.sublime-project",
+		"/Users/tim/mycode/lod-books/viewer/app/read/read.js",
+		"/Users/tim/mycode/lod-books/viewer2/.gitignore",
+		"/Users/tim/mycode/lod-books/viewer2/web.js",
+		"/Users/tim/mycode/lod-books/viewer2/app/modules/resources/resources.js",
+		"/Users/tim/mycode/lod-books/viewer2/app/modules/people/people.js",
+		"/Users/tim/mycode/lod-books/viewer2/app/modules/text/views/read_para.html",
+		"/Users/tim/mycode/lod-books/viewer2/Procfile",
+		"/Users/tim/mycode/lod-books/viewer2/Gruntfile.js",
+		"/Users/tim/mycode/lod-books/viewer2/app/modules/text/read.js",
+		"/Users/tim/mycode/lod-books/testyo/app/index.html",
+		"/Users/tim/mycode/lod-books/viewer2/app/scripts/app.js",
+		"/Users/tim/mycode/lod-books/viewer/app/resources/resource.html",
+		"/Users/tim/mycode/lod-books/viewer/app/resources/resources.html",
+		"/Users/tim/mycode/lod-books/viewer/app/resources/resources.js",
+		"/Users/tim/mycode/lod-books/viewer/app/people/people.js",
+		"/Users/tim/mycode/lod-books/viewer/app/app.css",
+		"/Users/tim/mycode/lod-books/viewer/app/read/read_test.js",
+		"/Users/tim/mycode/lod-books/viewer/app/app.js",
+		"/Users/tim/mycode/lod-books/viewer/app/people/person.html",
+		"/Users/tim/mycode/lod-books/viewer/app/read/read.html",
+		"/Users/tim/mycode/lod-books/viewer/app/people/people.html",
+		"/Users/tim/mycode/storydata2/data.rdf",
+		"/Users/tim/mycode/storydata2/people.rdf",
+		"/Users/tim/mycode/storydata2/webpages.rdf",
+		"/Users/tim/mycode/storydata2/resources.rdf",
+		"/Users/tim/mycode/lod-books/viewer/app/read/read_para.html",
+		"/Users/tim/mycode/storydata2/index.html",
+		"/Users/tim/mycode/lod-books/viewer/app/read/partials/text_element.html",
+		"/Users/tim/mycode/lod-books/viewer/schemas.md",
+		"/Users/tim/mycode/lod-books/viewer/app/partials/sidenav.html",
+		"/Users/tim/mycode/lod-books/viewer/bower.json",
+		"/Users/tim/mycode/lod-books/viewer/app/index.html",
+		"/Users/tim/mycode/lod-books/viewer2/.bowerrc",
+		"/Users/tim/mycode/lod-books/viewer2/package.json",
+		"/Users/tim/mycode/lod-books/viewer/app/people/view2.html",
+		"/Users/tim/mycode/lod-books/viewer/app/view2/view2.html",
+		"/Users/tim/mycode/lod-books/viewer/app/components/version/version-directive_test.js",
+		"/Users/tim/mycode/lod-books/viewer/app/components/version/version-directive.js",
+		"/Users/tim/mycode/lod-books/viewer/app/components/version/version.js",
+		"/Users/tim/mycode/lod-books/viewer/app/components/version/version_test.js",
+		"/Users/tim/mycode/lod-books/viewer/app/components/version/interpolate-filter_test.js",
+		"/Users/tim/mycode/lod-books/viewer/app/components/version/interpolate-filter.js",
+		"/Users/tim/mycode/lod-books/viewer/app/read/view1.js",
+		"/Users/tim/mycode/lod-books/viewer/app/read/view1.html",
+		"/Users/tim/mycode/lod-books/viewer/app/view1/view1.js",
+		"/Users/tim/mycode/lod-books/viewer/app/view1/view1.html",
+		"/Users/tim/mycode/Facial-detection/face_detect.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/collectionviews/static/css/trove-sunburst-iframe.css",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/settings_prod.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/collectionviews/static/css/qp-style.css",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/templates/tt-help.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/templates/querypic-footer.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/templates/tt-footer.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/qp-script.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/views.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/templates/tt-create.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/urls.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/settings_local.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/static/js/tt-script.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/thesistrends/templates/querypic-create.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/linkeddata/models.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/generic/models.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/parliament/models.py",
+		"/Users/tim/mycode/dhistory/dhistory/aphtools/client.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/parliament/tasks.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/templates/base.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/querypic-show.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/querypic-help.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/querypic-browse.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/querypic-home.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/qp-help-script.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/querypic-create.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/qp-show-script.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/templates/newspaper_line.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/views.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/settings.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/css/qp-style.css",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/bookmarklet.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/forms.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/templates/home.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/querypic-footer.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/rsviewer/templates/rsviewer-footer.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/search_indexes.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/rsviewer/views.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/rsviewer/templates/rsviewer-home.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/rsviewer/static/js/bookmarklet.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/models.py",
+		"/Users/tim/mycode/dhistory/fabfile.py",
+		"/Users/tim/mycode/querypic/js/script.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/qp-explore-script.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/templates/index.html",
+		"/Users/tim/mycode/nga_prints/ngaprints/ngaprints/prints/views.py",
+		"/Users/tim/mycode/nga_prints/ngaprints/ngaprints/prints/forms.py",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/templates/search/indexes/querypic/qpgraph_text.txt",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/mylibs/highcharts/highcharts.src.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/plugins.js",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/rsviewer/templates/rsviewer-wall.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/rsviewer/templates/rsviewer-base.html",
+		"/Users/tim/mycode/dhistory/dhistory/dhistory/querypic/static/js/script.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"module",
+			"setting",
+			"external",
+			"localhost:9000",
+			"http://localhost:8000/",
+			"/img/",
+			"/app/",
+			"mkdir",
+			"resource-agg-",
+			"wraggelabs.com/shed/presentations/digisam/resources.rdf#",
+			"wraggelabs.com/shed/presentations/digisam/people.rdf#",
+			"data",
+			"http://localhost/storydata2",
+			"format-articles",
+			"format-results",
+			"trovepro",
+			"showL",
+			"hide",
+			"results",
+			"input",
+			"#query",
+			"reset_q",
+			"get_ratio",
+			"Aus",
+			"trove_query",
+			"graph",
+			"showLo",
+			"display",
+			"display:",
+			"display"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"lodbookdev.herokuapp.com",
+			"http://localhost:9000/",
+			"/images/",
+			"/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/bootstrap.min.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 36868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 27.0
+	},
+	"pinned_build_system": "",
+	"project": "handbook.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/tim/mycode/nga_prints/ngaprints.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

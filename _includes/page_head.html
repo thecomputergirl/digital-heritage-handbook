@@ -1,0 +1,6 @@
+<h1><small>{{ page.type }}</small><br>{{ page.title}}</h1>
+
+{% unless page.status == "published" %}
+<p class="{% if page.status == 'draft' %}bg-warning{% else %}bg-danger{% endif %} bg-context"><small><b>{{ site.data.status[page.status].label }}, {% if page.updated %}{{ page.updated | date_to_long_string }}{% else %}{{ page.date | date_to_long_string }}{% endif %}</b><br>{{ site.data.status[page.status].message }}</small></p>
+{% endunless %}
+<hr>

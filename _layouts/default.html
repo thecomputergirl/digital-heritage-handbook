@@ -3,26 +3,7 @@
   {% include head.html %}
   <body>
     <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">Digital Heritage Handbook</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li {% if page.url == "/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
-              <li{% if page.url contains "modules" %} class="active"{% endif %}><a href="{{ site.baseurl }}/modules/">Modules</a></li>
-              <li{% if page.url contains "activities" %} class="active"{% endif %}><a href="{{ site.baseurl }}/activities/">Activities</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
+      {% include navbar.html %}
       {{ content }}
       {% include footer.html %}
     </div>  
@@ -30,5 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/script.js"></script>
   </body>
 </html>

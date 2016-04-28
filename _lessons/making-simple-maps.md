@@ -2,14 +2,16 @@
 author: Tim Sherratt
 title: Making simple maps
 date: 2016-04-12
-layout: default
+updated: 2016-04-12
+tags:
+  - maps
+  - CartoDB
+layout: default_module
+status: draft
+type: Lesson
 ---
 
-# Making simple maps
-
 This tutorial will show you how to create simple data-driven maps using free, cloud-based software.
-
-* {==Why maps?==}
 
 ## Software
 

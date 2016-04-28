@@ -1,0 +1,13 @@
+---
+permalink: /docs/
+layout: default
+title: Docs
+---
+
+<h1>Documentation</h1>
+
+<ul>
+{% for doc in site.docs | sort: "title" %}
+    <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
+{% endfor %}
+</ul>
