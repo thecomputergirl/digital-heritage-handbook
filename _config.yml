@@ -36,4 +36,7 @@ collections:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'Rakefile']

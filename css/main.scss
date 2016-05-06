@@ -5,6 +5,7 @@
 @import "variables";
 @import "bootstrap";
 @import "bootswatch";
+@import "syntax-highlighting";
 
 .site-footer {
     margin-top: 40px;
@@ -14,4 +15,16 @@
 
 .bg-context {
     padding: 15px;
+}
+
+.highlight code * {
+  white-space: nowrap;    // this sets all children inside to nowrap
+}
+
+.highlight {
+  overflow-x: auto;       // this sets the scrolling in x
+}
+
+.highlight code {
+  white-space: pre;       // forces <code> to respect <pre> formatting
 }

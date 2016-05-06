@@ -1,0 +1,77 @@
+---
+layout: default
+permalink: /tags/
+---
+
+<h1>Tags</h1>
+
+{% assign tags = "" | split:"|"  %}
+{% for page in site.docs %}
+  {% for tag in page.tags %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% for page in site.activities %}
+  {% for tag in page.tags %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% for page in site.lessons %}
+  {% for tag in page.tags %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% for page in site.courses %}
+  {% for tag in page.tags %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% for page in site.issues %}
+  {% for tag in page.tags %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
+
+<div id="archives">
+{% assign tags = tags | sort %}
+{% for tag in tags %}
+    <h3 id="#{{ tag| slugize }}">{{ tag }}</h3>
+    {% assign tagged_pages = "" | split:"|"  %}
+    {% for page in site.docs %}
+      {% if page.tags contains tag %}
+        {% assign tagged_pages = tagged_pages | push: page %}
+      {% endif %}
+    {% endfor %}
+    {% for page in site.activities %}
+      {% if page.tags contains tag %}
+        {% assign tagged_pages = tagged_pages | push: page %}
+      {% endif %}
+    {% endfor %}
+    {% for page in site.courses %}
+      {% if page.tags contains tag %}
+        {% assign tagged_pages = tagged_pages | push: page %}
+      {% endif %}
+    {% endfor %}
+    {% for page in site.lessons %}
+      {% if page.tags contains tag %}
+        {% assign tagged_pages = tagged_pages | push: page %}
+      {% endif %}
+    {% endfor %}
+    <ul>
+    {% for page in tagged_pages %}
+      <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+</div>
