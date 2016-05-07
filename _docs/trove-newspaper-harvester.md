@@ -69,9 +69,6 @@ If you don't have a Trove API key, now would be a good time to [go and get one <
 
 The Trove newspaper search url is just the url that Trove sends you to when you construct a search on the web site. So simply go to Trove's newspaper zone, build your search, then copy the url in your browser's location box. The newspaper harvester will translate your query into a form that the Trove API can understand.
 
-{: .bg-danger .bg-context }
-<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> On Windows you can't just paste the url into the command line using the normal 'ctrl-v' key combination. Here's [what you need to do]({{ site.baseurl }}/docs/using-the-command-line/#pasting-into-a-windows-terminal).
-
 Alternatively, you can use something like the [Trove API Console <i class="fa fa-external-link" aria-hidden="true"></i>](https://troveconsole.herokuapp.com/) to construct an API query yourself. The harvester will then just pass the url on without any translation.
 
 There are three options you can add to the start command:
@@ -99,6 +96,9 @@ And if I wanted to save pdfs and text files for every article:
 ``` shell
 $ troveharvester start "http://trove.nla.gov.au/newspaper/result?q=wragge" thisismyapikey --pdf --text
 ```
+
+{: .bg-danger .bg-context }
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Note that in Windows you can't just paste your url and key into the command line using the normal 'ctrl-v' key combination. Here's [what you need to do]({{ site.baseurl }}/docs/using-the-command-line/#pasting-into-a-windows-terminal).
 
 ### Harvest results
 
@@ -137,7 +137,7 @@ $ troveharvester restart
 
 The harvester will look for the most recent results folder (they're named with timestamps remember?) and read the configuration details from the `metadata.json` file. It then inspects the `results.csv` file to see where the harvest got up to. Just to be on the safe side it removes the last row in the results file so that it can be reharvested. It then starts up again from where it was interrupted.
 
-If you won't to go back and restart an earlier harvest, you just need to supply the name of the folder containing the harvest:
+If you want to go back and restart an earlier harvest, you just need to supply the name of the folder containing the harvest:
 
 ``` shell
 $ troveharvester restart --harvest [harvest directory name (timestamp)]
@@ -182,6 +182,12 @@ Last article harvested:
   u'0',
   u'http://nla.gov.au/nla.news-article112739205']
 
+```
+
+Similar to the `restart` command, you can also specify the name of a harvest to report on.
+
+``` shell
+$ troveharvester report --harvest [harvest directory name (timestamp)]
 ```
 
 ## Notes
