@@ -19,6 +19,12 @@ Introduction -- focus on knowing what's possible.
 * [The web isn't a thing](#the-web-isnt-a-thing)
 * [Hacking RecordSearch](#hacking-recordsearch)
 * [Working with data](#working-with-data)
+* [Harvesting Trove](#harvesting-trove)
+* [Text as data](#text-as-data)
+* [Finding faces](#finding-faces)
+* [Telling stories with maps](#telling-stories-with-maps)
+* [The read/write web](#the-readwrite-web)
+* [Going further](#going-further)
 
 ----
 
