@@ -33,7 +33,7 @@ $ pip install python-dateutil
 
 We're going to make use of some [general Trove harvesting code <i class="fa fa-external-link" aria-hidden="true"></i>](https://github.com/Trove-Toolshed/trove-python) that I've already created, but first we have to download and install it.
 
-If you have Git, it's just a matter of typing the following inside your working environment:
+If you have [Git <i class="fa fa-external-link" aria-hidden="true"></i>](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), it's just a matter of typing the following inside your working environment:
 
 ``` shell
 $ git clone https://github.com/Trove-Toolshed/trove-python.git
@@ -192,13 +192,7 @@ def make_images_dir(path='images'):
 
 ```
 
-Now we can start building up `process_records.py` by calling our new function:
-
-``` python
-images_dir = self.make_images_dir()
-```
-
-We'll also create a list to put our page ids in:
+We need to keep a list of page ids so we can check for duplicates. But because `process_records.py` only processes one set of records at a time (20 by default), we need to save the list as part of our harvester class so it will available every time `process_records.py` runs. Inside `GadflyHarvester` before `process_records.py`, add:
 
 ``` python
 page_ids = []
@@ -207,9 +201,17 @@ page_ids = []
 For each new article we can then do something like this to weed out the duplicates:
 
 ``` python
-if page_id not in page_ids:
-	page_ids.append(page_id)
+if page_id not in self.page_ids:
+	self.page_ids.append(page_id)
 	# save image using page_id
+```
+
+The `self` means that the `page_ids` variable is attached to the parent class.
+
+Now we can start building up the rest of`process_records.py`. We'll start calling our new `make_images_dir()` function:
+
+``` python
+images_dir = self.make_images_dir()
 ```
 
 To get the `page_id` in the first place we can use a regular expression to separate out the numeric bit at the end of `trovePageUrl`:
@@ -230,12 +232,12 @@ We'll wrap all of this inside a CSV writer to save the page details to a file. S
 
 ``` python
 class GadflyHarvester(TroveHarvester):
-
+    page_ids = []
+    
     def process_results(self, results):
         try:
             articles = results[0]['records']['article']
             images_dir = self.make_images_dir()
-            page_ids = []
             # Open a CSV file to write the results
             with open('results.csv', 'ab') as results_file:
                 writer = csv.writer(results_file)

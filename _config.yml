@@ -33,6 +33,9 @@ collections:
   courses:
     output: true
     permalink: '/:collection/:title/'
+  events:
+    output: true
+    permalink: '/:collection/:title/'
 
 # Build settings
 markdown: kramdown
